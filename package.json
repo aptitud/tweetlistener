@@ -1,0 +1,14 @@
+{
+  "name": "tweetlistener.js",
+  "description": "Internet Chat/Twitter app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engine": "node >= 0.10.25",
+  "dependencies": {
+    "express": "2.5.11",
+    "twitter": "^1.2.5"
+  }
+}
