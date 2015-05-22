@@ -2,20 +2,21 @@
 var express = require('express'),
     app = express.createServer();
 
-var http = require('http');
+var http = require('http'),
+    config = require('./config');
 
 app.configure(function () {
 });
 
-app.listen("8080");
+app.listen(config.appPort);
 
 var Twitter = require('twitter');
  
 var client = new Twitter({
-  consumer_key: '',
-  consumer_secret: '',
-  access_token_key: '',
-  access_token_secret: ''
+  consumer_key: config.tweetApiKey,
+  consumer_secret: config.twitterSecret,
+  access_token_key: config.twitterAccessToken,
+  access_token_secret: config.twitterAccessSecret
 });
  
 var params = {screen_name: 'nodejs'};
